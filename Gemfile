@@ -22,3 +22,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+# 共同開発用のGem追加
+ gem 'pry-byebug'
+ gem 'pry-doc'
+ gem 'pry-rails'
