@@ -28,4 +28,4 @@ end
  gem 'pry-doc'
  gem 'pry-rails'
 
-# タスクNo.5で Deprecation warningが出たときの対策
+ gem 'devise'
