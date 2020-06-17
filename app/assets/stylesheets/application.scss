@@ -11,3 +11,13 @@ main {
   margin: 0 auto;
   padding: 1rem;
 }
+
+.alert-notice {
+  @extend .alert-success;
+  width:100%;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+  width:100%;
+}
