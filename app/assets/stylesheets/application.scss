@@ -11,3 +11,19 @@ main {
   margin: 0 auto;
   padding: 1rem;
 }
+
+.sticky-top {
+  background-color: #5D99FF;
+}
+
+@media screen and (min-width: 992px){
+  .navbar {
+      font-size: 0.8rem;
+      margin: 0 auto;
+      width: var(--breakpoint-lg);
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
