@@ -9,14 +9,6 @@ class Import
     list = []
     CSV.foreach(path, headers: true) { |row| list << row.to_h }
     list
-
-    puts "インポート処理を開始"
-    begin
-      AwsText.create!(list)
-      puts "インポート完了"
-    rescue ActiveModel::UnknownAttributeError => invalid
-      puts "インポートに失敗しました #{invalid}"
-    end
   end
 
 end
