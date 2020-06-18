@@ -12,6 +12,12 @@ main {
   padding: 1rem;
 }
 
+.container-login {
+  @extend .container-fluid;
+  max-width: 576px;
+  padding: 2rem;
+}
+
 .alert-notice {
   @extend .alert-success;
   width:100%;
