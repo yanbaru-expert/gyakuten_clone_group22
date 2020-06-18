@@ -27,3 +27,13 @@ main {
     justify-content: flex-end;
   }
 }
+
+.alert-notice {
+  @extend .alert-success;
+  width:100%;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+  width:100%;
+}

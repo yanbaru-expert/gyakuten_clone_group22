@@ -13,7 +13,9 @@
   <body>
     <%# ヘッダー %>
     <%= render 'shared/header'%>
+    <%= render "layouts/notification" %>
     <main>
+      
       <%= yield %>
     </main>
     <footer>
