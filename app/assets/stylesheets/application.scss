@@ -16,29 +16,30 @@ main {
   @extend .container-fluid;
   max-width: 576px;
   padding: 2rem;
+}
 
-  .sticky-top {
-    background-color: #5D99FF;
+.sticky-top {
+  background-color: #5D99FF;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    font-size: 0.8rem;
+    margin: 0 auto;
+    width: var(--breakpoint-lg);
   }
 
-  @media screen and (min-width: 992px) {
-    .navbar {
-      font-size: 0.8rem;
-      margin: 0 auto;
-      width: var(--breakpoint-lg);
-    }
-
-    .navbar-collapse {
-      justify-content: flex-end;
-    }
+  .navbar-collapse {
+    justify-content: flex-end;
   }
+}
 
-  .alert-notice {
-    @extend .alert-success;
-    width: 100%;
-  }
+.alert-notice {
+  @extend .alert-success;
+  width: 100%;
+}
 
-  .alert-alert {
-    @extend .alert-danger;
-    width: 100%;
-  }
+.alert-alert {
+  @extend .alert-danger;
+  width: 100%;
+}
