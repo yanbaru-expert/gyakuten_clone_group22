@@ -7,15 +7,21 @@ main {
   padding: 1rem;
 }
 
+.container-login {
+  @extend .container-fluid;
+  max-width: 576px;
+  padding: 2rem;
+}
+
 .sticky-top {
   background-color: #5D99FF;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
   .navbar {
-      font-size: 0.8rem;
-      margin: 0 auto;
-      width: var(--breakpoint-lg);
+    font-size: 0.8rem;
+    margin: 0 auto;
+    width: var(--breakpoint-lg);
   }
 
   .navbar-collapse {
@@ -25,10 +31,10 @@ main {
 
 .alert-notice {
   @extend .alert-success;
-  width:100%;
+  width: 100%;
 }
 
 .alert-alert {
   @extend .alert-danger;
-  width:100%;
+  width: 100%;
 }

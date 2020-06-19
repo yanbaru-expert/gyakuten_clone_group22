@@ -34,3 +34,4 @@ end
  gem 'devise-i18n'
 
  gem 'activeadmin'
+ gem 'devise-bootstrap-views'
