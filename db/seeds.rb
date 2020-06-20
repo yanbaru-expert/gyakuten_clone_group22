@@ -19,7 +19,7 @@ end
 
 #管理者： テストユーザーが存在しないときだけ作成
 AdminUser.find_or_create_by!(email: ADMINEMAIL) do |admin_user|
-  admin_user.password = ADMINPASSWORD
+  admin_user.password = ADMINPASS
   puts '管理者の初期データインポートに成功しました。'
 end
 # AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
