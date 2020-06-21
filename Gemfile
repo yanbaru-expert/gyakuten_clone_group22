@@ -34,3 +34,6 @@ end
  gem 'devise-i18n'
 
  gem 'devise-bootstrap-views'
+
+ gem 'redcarpet', '~> 2.3.0'
+ gem 'coderay'
