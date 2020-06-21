@@ -29,7 +29,7 @@
 }
 
 .table-container {
-  width: 100%;
+  width: 710px;
   margin: 0 auto;
 }
 
@@ -80,8 +80,11 @@
   }
 
   .container p {
-    padding: 20px 0 10px 0;
+    width: 710px;
+    margin: 0 auto;
+    padding-bottom: 15px;
     font-size: 17px;
+    line-height: 1.9em;
   }
 
   .table {
