@@ -35,3 +35,6 @@ end
 
  gem 'activeadmin'
  gem 'devise-bootstrap-views'
+
+ gem 'redcarpet', '~> 2.3.0'
+ gem 'coderay'

@@ -34,10 +34,6 @@ main {
   font-size: 30px;
 }
 
-.container p {
-  line-height: 1.9em;
-}
-
 .table-container {
   width: 100%;
   margin: 0 auto;
@@ -49,6 +45,10 @@ main {
 
 .aws_text_head {
   background-color: #5D99FF;
+}
+
+.content-show {
+  padding: 120px 0 80px 0;
 }
 
 @media screen and (max-width: 991px){
@@ -70,6 +70,51 @@ main {
 }
 
 @media screen and (min-width: 992px){
+  #questions .question-container{
+    padding: 30px 0;
+  }
+
+  #questions a {
+    text-decoration: none;
+    display: block;
+    color: #333333;
+    border: solid 2px #505050;
+    border-radius: 10px;
+    transition: .4s
+  }
+
+  #questions a .title-container {
+        word-wrap: normal
+    }
+
+    #questions a .title {
+        font-size: 22px;
+    }
+
+    #questions a .info {
+        padding: 10px 10px 10px 20px;
+        color: #BBBBBB;
+    }
+
+    #questions a:hover {
+        border: solid 2px #7d9ccb;
+        transform: translateY(-5px);
+        transition: .4s
+    }
+
+    #questions .question {
+        padding: 10px
+    }
+
+    #question {
+        width: 710px;
+        margin: 0 auto
+    }
+
+    #question .title {
+        padding-top: 30px
+    }
+
   .navbar {
     font-size: 0.8rem;
     margin: 0 auto;
