@@ -9,7 +9,7 @@
 
 
 main {
-  max-width: 700px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -92,10 +92,17 @@ main {
   .table {
     width: 100%;
   }
+
+  .movie-body {
+    height: 200px;
+  }
 }
 
-
-
+@media screen and (min-width: 1200px){
+  main {
+      width: 1200px;
+  }
+}
 .alert-notice {
   @extend .alert-success;
   width: 100%;
@@ -104,4 +111,9 @@ main {
 .alert-alert {
   @extend .alert-danger;
   width: 100%;
+}
+
+// 動画教材
+.movie-title {
+  font-size: 1.7rem
 }
