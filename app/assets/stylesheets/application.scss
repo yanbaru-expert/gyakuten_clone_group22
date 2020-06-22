@@ -45,6 +45,14 @@
   padding: 120px 0 80px 0;
 }
 
+@media screen and (min-width: 0px){
+  .container p.movie-title {
+    height: 200px;
+    font-size: 1.7rem;
+    line-height: 1.5em;
+  }
+}
+
 @media screen and (max-width: 991px){
   .container {
     font-size: 0.5rem;
@@ -80,11 +88,19 @@
   }
 
   .container p {
+    font-size: 17px;
+    line-height: 1.9em;
+  }
+
+  .contents p {
     width: 710px;
     margin: 0 auto;
     padding-bottom: 15px;
-    font-size: 17px;
-    line-height: 1.9em;
+  }
+
+  .content-show {
+    width: 710px;
+    margin: 0 auto;
   }
 
   .table {
@@ -110,9 +126,4 @@
 .alert-alert {
   @extend .alert-danger;
   width: 100%;
-}
-
-// 動画教材
-.movie-title {
-  font-size: 1.7rem
 }
