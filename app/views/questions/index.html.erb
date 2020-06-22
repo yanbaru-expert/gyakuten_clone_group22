@@ -1,24 +1,42 @@
-<section id="questions">
+<div id="container">
   <div class="container">
-    <% @questions.each do |question| %>
-      <div class="question-container">
-        <a href="#">
-          <div class="question">
-            <div class="row">
-              <div class="col-md-7">
-                <div class="title-container">
-                  <p class="title"><%= question.title.truncate(50) %></p>
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="info text-right">
-                  <p>質問日　<%= l question.created_at.to_date %></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
+    <h1>新規投稿</h1>
+    <%= form_with model: @question, scope: :question, local: true do |f| %>
+      <div class="form-group">
+        <%= f.label :title, "【質問】", class: "control-label" %>
+        <%= f.text_area :title, class: "form-control", rows: 3%>
+      </div>
+      <div class="form-group">
+        <%= f.label :detail, "【詳細】", class: "control-label" %>
+        <%= f.text_area :detail, class: "form-control", rows: 5%>
+      </div>
+      <div class="form-group">
+        <%= f.submit "送信", class: "btn btn-primary btn-block btn-lg", data: { confirm: "新規投稿しますか？" } %>
       </div>
     <% end %>
   </div>
-</section>
+  <section id="questions">
+    <div class="container">
+      <% @questions.each do |question| %>
+        <div class="question-container">
+          <a href="#">
+            <div class="question">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="title-container">
+                    <p class="title"><%= question.title.truncate(50) %></p>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="info text-right">
+                    <p>質問日　<%= l question.created_at.to_date %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</div>
