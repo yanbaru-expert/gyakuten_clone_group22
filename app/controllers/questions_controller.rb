@@ -1,15 +1,17 @@
 class QuestionsController < ApplicationController
   def index
+    @question = Question.new
     @questions = Question.all.order(created_at: :desc)
   end
 
-  def new
-    @question = Question.new
-  end
-
   def create
-    Question.create(title: question_params[:title], detail: question_params[:detail])
-    redirect_to action: :index
+    @question = Question.new(question_params)
+    if @question.save
+        redirect_to questions_path, notice: "投稿に成功しました。"
+    else
+        @questions = Question.all.order(created_at: :desc)
+        render :index
+    end
   end
 
   private
