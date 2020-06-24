@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box
 }
+
 @import "bootstrap/scss/bootstrap";
 
 
@@ -47,7 +48,7 @@ main {
   padding: 120px 0 80px 0;
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
   .container {
     font-size: 0.5rem;
   }
@@ -59,19 +60,23 @@ main {
   .container p {
     font-size: 0.8rem;
   }
-  
+
   .table {
     width: 90%;
   }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
+  #container {
+    padding-top: 120px;
+  }
+  
   #container h1 {
-      padding: 20px 0px 10px 0px;
-      font-size: 30px
+    padding: 20px 0px 10px 0px;
+    font-size: 30px
   }
 
-  #questions .question-container{
+  #questions .question-container {
     padding: 30px 0;
   }
 
@@ -85,36 +90,36 @@ main {
   }
 
   #questions a .title-container {
-        word-wrap: normal
-    }
+    word-wrap: normal
+  }
 
-    #questions a .title {
-        font-size: 22px;
-    }
+  #questions a .title {
+    font-size: 22px;
+  }
 
-    #questions a .info {
-        padding: 10px 10px 10px 20px;
-        color: #BBBBBB;
-    }
+  #questions a .info {
+    padding: 10px 10px 10px 20px;
+    color: #BBBBBB;
+  }
 
-    #questions a:hover {
-        border: solid 2px #7d9ccb;
-        transform: translateY(-5px);
-        transition: .4s
-    }
+  #questions a:hover {
+    border: solid 2px #7d9ccb;
+    transform: translateY(-5px);
+    transition: .4s
+  }
 
-    #questions .question {
-        padding: 10px
-    }
+  #questions .question {
+    padding: 10px
+  }
 
-    #question {
-        width: 710px;
-        margin: 0 auto
-    }
+  #question {
+    width: 710px;
+    margin: 0 auto
+  }
 
-    #question .title {
-        padding-top: 30px
-    }
+  #question .title {
+    padding-top: 30px
+  }
 
   .navbar {
     font-size: 0.8rem;
@@ -125,7 +130,7 @@ main {
   .navbar-collapse {
     justify-content: flex-end;
   }
-  
+
   .container {
     padding: 120px 0 80px 0;
   }
@@ -141,7 +146,7 @@ main {
 }
 
 #error_explanation {
-    color: red;
+  color: red;
 }
 
 .field_with_errors {
@@ -150,7 +155,7 @@ main {
   textarea {
     @extend .is-invalid;
   }
-  
+
 }
 
 
