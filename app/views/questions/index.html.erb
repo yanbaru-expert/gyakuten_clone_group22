@@ -1,5 +1,38 @@
-<section id="questions">
-  <div class="container">
+<div class="container-question">
+
+  <h2>新規投稿</h2>
+  
+  <%= form_with model: @question, local: true do |f| %>
+
+    <% if @question.errors.any? %>
+      <div id="error_explanation">
+        <div class="alert alert-danger">
+          <%= @question.errors.full_messages.length %>つのエラーがあります。
+        </div>
+        <ul>
+          <% @question.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :title, "【質問】", class: "control-label" %>
+      <%= f.text_area :title, class: "form-control", rows: 3%>
+    </div>
+    <div class="form-group">
+      <%= f.label :detail, "【詳細】", class: "control-label" %>
+      <%= f.text_area :detail, class: "form-control", rows: 5%>
+    </div>
+    <div class="form-group">
+      <%= f.submit "送信", class: "btn btn-primary btn-block btn-lg", data: { confirm: "新規投稿しますか？" } %>
+    </div>
+
+  <% end %>
+
+  <section id="questions">
+
     <% @questions.each do |question| %>
       <div class="question-container">
         <a href="#">
@@ -20,5 +53,7 @@
         </a>
       </div>
     <% end %>
-  </div>
-</section>
+
+  </section>
+
+</div>
