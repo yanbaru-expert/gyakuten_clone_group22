@@ -110,11 +110,19 @@ main {
         width: 710px;
         margin: 0 auto
     }
+    
+    h3 {
+      font-size: 20px;
+      color:#000000;
+    }
 
     #question .title {
         padding-top: 30px
     }
-
+    pre {
+      border: 0.1px solid;
+      padding: 10px
+  }
   .navbar {
     font-size: 0.8rem;
     margin: 0 auto;

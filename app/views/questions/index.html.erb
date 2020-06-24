@@ -2,12 +2,12 @@
   <div class="container">
     <% @questions.each do |question| %>
       <div class="question-container">
-        <a href="#">
+        <a href ="/questions/<%= question.id %>" > 
           <div class="question">
             <div class="row">
               <div class="col-md-7">
                 <div class="title-container">
-                  <p class="title"><%= question.title.truncate(50) %></p>
+                  <p class="title"><%= question.title %></p>
                 </div>
               </div>
               <div class="col-md-5">
