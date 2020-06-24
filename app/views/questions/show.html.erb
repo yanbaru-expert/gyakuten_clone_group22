@@ -1,15 +1,17 @@
-<h3>【質問】</h3>
-<%= markdown(@question.title).html_safe %>
-<br>
-<hr>
-<br>
-<h3>【詳細】</h3>
-<%= markdown(@question.detail).html_safe %>
+<div class="container-question">
+  <h3>【質問】</h3>
+  <%= markdown(@question.title).html_safe %>
+  <br>
+  <hr>
+  <br>
+  <h3>【詳細】</h3>
+  <%= markdown(@question.detail).html_safe %>
 
-<hr><br>
-<% if @solution.answer? %>
-<%= markdown(@solution.answer).html_safe %>
-<% else %>
-　<!-- 回答データがない場合に表示されるところ-->
-<% end %>
-<br>
+  <hr><br>
+  <% if @solution.answer? %>
+  <%= markdown(@solution.answer).html_safe %>
+  <% else %>
+  　<!-- 回答データがない場合に表示されるところ-->
+  <% end %>
+  <br>
+</div>
