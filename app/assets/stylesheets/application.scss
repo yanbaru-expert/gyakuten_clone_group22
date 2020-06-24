@@ -5,12 +5,6 @@
 @import "bootstrap/scss/bootstrap";
 
 
-main {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
 .container-login {
   @extend .container-fluid;
   max-width: 576px;
@@ -32,7 +26,7 @@ main {
 }
 
 .table-container {
-  width: 100%;
+  width: 710px;
   margin: 0 auto;
 }
 
@@ -46,6 +40,30 @@ main {
 
 .content-show {
   padding: 120px 0 80px 0;
+}
+
+.pagination {
+  justify-content: center;
+  width: 100%;
+}
+
+.pagination>li>a {
+  color: #5D99FF;
+  background: white;
+}
+
+.pagination>.active>a {
+  background: #5D99FF;
+  color: white;
+}
+
+
+@media screen and (min-width: 0px) {
+  .container p.movie-title {
+    height: 200px;
+    font-size: 1.7rem;
+    line-height: 1.5em;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -133,15 +151,31 @@ main {
 
   .container {
     padding: 120px 0 80px 0;
+    margin: 0 auto;
   }
 
   .container p {
-    padding: 20px 0 10px 0;
     font-size: 17px;
+    line-height: 1.9em;
+  }
+
+  .contents p {
+    width: 710px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+
+  .content-show {
+    width: 710px;
+    margin: 0 auto;
   }
 
   .table {
     width: 100%;
+  }
+
+  .movie-body {
+    height: 200px;
   }
 }
 
@@ -155,9 +189,13 @@ main {
   textarea {
     @extend .is-invalid;
   }
-
 }
 
+@media screen and (min-width: 1200px){
+  .container {
+      width: 1200px;
+  }
+}
 
 .alert-notice {
   @extend .alert-success;
