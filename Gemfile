@@ -39,3 +39,5 @@ end
  #markdonw 対応
  gem 'redcarpet', '~> 2.3.0'
  gem 'coderay'
+
+ gem 'kaminari'

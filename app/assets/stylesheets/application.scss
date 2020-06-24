@@ -1,23 +1,19 @@
-/*
- *= require_tree .
- *= require_self
- */
 * {
   box-sizing: border-box
 }
+
 @import "bootstrap/scss/bootstrap";
 
-
-main {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 1rem;
-}
 
 .container-login {
   @extend .container-fluid;
   max-width: 576px;
   padding: 2rem;
+}
+
+.container-question {
+  @extend .container-fluid;
+  max-width: 710px;
 }
 
 .sticky-top {
@@ -35,7 +31,7 @@ main {
 }
 
 .table-container {
-  width: 100%;
+  width: 710px;
   margin: 0 auto;
 }
 
@@ -51,7 +47,31 @@ main {
   padding: 120px 0 80px 0;
 }
 
-@media screen and (max-width: 991px){
+.pagination {
+  justify-content: center;
+  width: 100%;
+}
+
+.pagination>li>a {
+  color: #5D99FF;
+  background: white;
+}
+
+.pagination>.active>a {
+  background: #5D99FF;
+  color: white;
+}
+
+
+@media screen and (min-width: 0px) {
+  .container p.movie-title {
+    height: 200px;
+    font-size: 1.7rem;
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (max-width: 991px) {
   .container {
     font-size: 0.5rem;
   }
@@ -63,14 +83,14 @@ main {
   .container p {
     font-size: 0.8rem;
   }
-  
+
   .table {
     width: 90%;
   }
 }
 
-@media screen and (min-width: 992px){
-  #questions .question-container{
+@media screen and (min-width: 992px) {
+  #questions .question-container {
     padding: 30px 0;
   }
 
@@ -84,28 +104,29 @@ main {
   }
 
   #questions a .title-container {
-        word-wrap: normal
-    }
+    word-wrap: normal
+  }
 
-    #questions a .title {
-        font-size: 22px;
-    }
+  #questions a .title {
+    font-size: 22px;
+  }
 
-    #questions a .info {
-        padding: 10px 10px 10px 20px;
-        color: #BBBBBB;
-    }
+  #questions a .info {
+    padding: 10px 10px 10px 20px;
+    color: #BBBBBB;
+  }
 
-    #questions a:hover {
-        border: solid 2px #7d9ccb;
-        transform: translateY(-5px);
-        transition: .4s
-    }
+  #questions a:hover {
+    border: solid 2px #7d9ccb;
+    transform: translateY(-5px);
+    transition: .4s
+  }
 
-    #questions .question {
-        padding: 10px
-    }
+  #questions .question {
+    padding: 10px
+  }
 
+<<<<<<< HEAD
     #question {
         width: 710px;
         margin: 0 auto
@@ -123,6 +144,17 @@ main {
       border: 0.1px solid;
       padding: 10px
   }
+=======
+  #question {
+    width: 710px;
+    margin: 0 auto
+  }
+
+  #question .title {
+    padding-top: 30px
+  }
+
+>>>>>>> 33e77efab585cb0a45bc40a6ae64f2a231c80f71
   .navbar {
     font-size: 0.8rem;
     margin: 0 auto;
@@ -132,22 +164,54 @@ main {
   .navbar-collapse {
     justify-content: flex-end;
   }
-  
+
   .container {
     padding: 120px 0 80px 0;
+    margin: 0 auto;
   }
 
   .container p {
-    padding: 20px 0 10px 0;
     font-size: 17px;
+    line-height: 1.9em;
+  }
+
+  .contents p {
+    width: 710px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+
+  .content-show {
+    width: 710px;
+    margin: 0 auto;
   }
 
   .table {
     width: 100%;
   }
+
+  .movie-body {
+    height: 200px;
+  }
 }
 
+#error_explanation {
+  color: red;
+}
 
+.field_with_errors {
+  display: contents;
+
+  textarea {
+    @extend .is-invalid;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .container {
+      width: 1200px;
+  }
+}
 
 .alert-notice {
   @extend .alert-success;
