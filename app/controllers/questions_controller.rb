@@ -6,8 +6,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
-    @solution = Solution.new
-    @solutions = @question.solutions
+    @solutions = Solution.where(question_id: @question.id)
   end
 
   def create
@@ -25,4 +24,10 @@ class QuestionsController < ApplicationController
   def question_params
     params.require(:question).permit(:title, :detail)
   end
+
+  def solution_params
+    params.require(:solution).permit(:question_id)
+  end
+  
+  
 end
