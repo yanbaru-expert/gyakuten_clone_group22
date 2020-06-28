@@ -8,10 +8,21 @@
   <%= markdown(@question.detail).html_safe %>
 
   <hr><br>
-  <% if @solution.answer? %>
-  <%= markdown(@solution.answer).html_safe %>
-  <% else %>
-  　<!-- 回答データがない場合に表示されるところ-->
-  <% end %>
+
+    <% @solutions.each do |solution| %>
+      <h3>【回答】</h3>
+      <%= markdown(solution.answer).html_safe %>
+    <% end %>
+
   <br>
+
+
+  <div class="container-solution">
+    <h2>回答投稿</h2>
+    <%= form_with url: question_solutions_path(@question.id), local: true do |f| %>
+      <%= f.label :answer, "【回答】" %>
+        <p><%= f.text_area :answer, class:" form-control initial-height",rows: "5" %></p>
+        <p><%= f.submit "送信", class: "btn btn-primary btn-block btn-lg" %></p>
+    <% end %>
+  </div>
 </div>
