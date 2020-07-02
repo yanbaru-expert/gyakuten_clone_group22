@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <% @movies.each.with_index(1) do |movie, i| %>
+    <% @movies.each.with_index do |movie, i| %>
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card border-dark mb-3">
           <div class="card-header p-0">
@@ -10,16 +10,20 @@
           </div>
           <div class="card-body text-dark movie-body">
             <p class="card-text movie-title">
-              Lv.<%= i %>：<%= movie.title %>
+              <% if movie.id >= 19 %>
+                Lv.<%= i + 19 %>：<%= movie.title %>
+              <% else %>
+                Lv.<%= i + 1 %>：<%= movie.title %>
+              <% end %>
             </p>
           </div>
         </div>
       </div>
     <% end %>
-  </div>
-  <nav>
-      <ul class="pagination pagination-sm">
-        <%= paginate @movies %>
-      </ul>
-  </nav>
+    </div>
+    <nav>
+        <ul class="pagination pagination-sm">
+          <%= paginate @movies %>
+        </ul>
+    </nav>
 </div>
