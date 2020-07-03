@@ -11,13 +11,11 @@
   </head>
 
   <body>
-    <%# ヘッダー %>
     <%= render 'shared/header'%>
     <%= render "layouts/notification" %>
     <div class="container">
       <%= yield %>
     </div>
-    <footer>
-    </footer>
+    <%= render 'shared/footer'%>
   </body>
 </html>
