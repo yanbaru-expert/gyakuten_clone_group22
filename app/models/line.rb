@@ -1,3 +1,3 @@
 class Line < ApplicationRecord
-  validates :genre, :title, :content, presence: true
+  validates :genre, :title, :contents, presence: true
 end
