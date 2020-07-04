@@ -1,18 +1,19 @@
-  <h2 class="text-center">LINE@</h2>
+  <h2 class="text-success text-center">LINE@</h2>
   <div class="contents">
     <div class="table-container">
       <table class="table table-striped">
-        <thead class="aws_text_head text-white">
+        <thead class="bg-success text-white">
           <tr>
-            <th>No.</th>
-            <th>ジャンル</th>
-            <th>内容</th>
+            <th class="w-1">No.</th>
+            <th class="w-2">ジャンル</th>
+            <th class="w-5">内容</th>
           </tr>
         </thead>
         <tbody>
-          <% @line.each.with_index(1) do |line, i| %>
+          <% @lines.each.with_index(1) do |line, i| %>
             <tr>
               <td><%= i %></td>
+              <td><%= line.genre %>
               <td><%= link_to line.title, line_path(line.id) %></td>
             </tr>
           <% end %>
