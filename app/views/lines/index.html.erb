@@ -1,0 +1,22 @@
+  <h2 class="text-center">LINE@</h2>
+  <div class="contents">
+    <div class="table-container">
+      <table class="table table-striped">
+        <thead class="aws_text_head text-white">
+          <tr>
+            <th>No.</th>
+            <th>ジャンル</th>
+            <th>内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @line.each.with_index(1) do |line, i| %>
+            <tr>
+              <td><%= i %></td>
+              <td><%= link_to line.title, line_path(line.id) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
