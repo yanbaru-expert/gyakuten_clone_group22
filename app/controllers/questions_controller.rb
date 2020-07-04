@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @question = Question.new
     @questions = Question.all.order(created_at: :desc)
