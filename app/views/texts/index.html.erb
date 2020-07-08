@@ -5,10 +5,23 @@
         <div class="card border-dark mb-3">
           <%= link_to text_path(text.id),target: :blank do %>
             <div class="card-header p-0">
-              <div class="embed-responsive embed-responsive-16by9">
-        
+              <div class="card-header p-0">
+                <div class="embed-responsive embed-responsive-16by9">
+          
+                </div>
               </div>
             </div>
+            
+            <% if current_user.verifys.find_by(text_id: text.id) %>
+              <%= link_to verify_path(text.id), method: :delete, remote: true do %>
+                <div class="btn btn-primary btn-block btn-lg">視聴済みを解除</div>
+              <% end %>
+            <% else %>
+              <%= link_to verifys_path(text.id), method: :post, remote: true do %>
+                <div class="btn btn-secondary btn-block btn-lg">視聴済みにする</div>
+              <% end %>            
+            <% end %>
+
             <div class="card-body text-dark text-body">
               <p class="card-text text-title">
                 <%= text.title %>
