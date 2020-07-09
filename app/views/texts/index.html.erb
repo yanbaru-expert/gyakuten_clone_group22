@@ -11,14 +11,15 @@
                 </div>
               </div>
             </div>
-            
-            <% if current_user.verifys.find_by(text_id: text.id) %>
-              <%= link_to verify_path(text.id), method: :delete, remote: true do %>
-                <div class="btn btn-primary btn-block btn-lg">視聴済みを解除</div>
+
+            <!-- 読破ボタン -->
+            <% if @read_text_ids.include?(text.id) %>
+              <%= link_to text_reads_path(text), method: :delete, remote: true do %>
+                <div class="btn btn-primary btn-block btn-sm">読破済みを解除</div>
               <% end %>
             <% else %>
-              <%= link_to verifys_path(text.id), method: :post, remote: true do %>
-                <div class="btn btn-secondary btn-block btn-lg">視聴済みにする</div>
+              <%= link_to text_reads_path(text), method: :post, remote: true do %>
+                <div class="btn btn-secondary btn-block btn-sm">読破済みにする</div>
               <% end %>            
             <% end %>
 

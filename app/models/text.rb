@@ -2,5 +2,6 @@ class Text < ApplicationRecord
   validates :title, :content, presence: true
   
   belongs_to :user
-  has_many :verifys
+  has_many :reads
+  
 end
