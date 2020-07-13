@@ -2,13 +2,7 @@
   <h1><%= @text.title %></h1>
   <%= markdown(@text.content).html_safe %>
   <!-- 読破ボタン -->
-  <% if @read_text_ids.include?(@text.id) %>
-    <%= link_to text_reads_path(@text), method: :delete, remote: true do %>
-      <div class="btn btn-primary btn-block btn-sm">読破済みを解除</div>
-    <% end %>
-  <% else %>
-    <%= link_to text_reads_path(@text), method: :post, remote: true do %>
-      <div class="btn btn-secondary btn-block btn-sm">読破済みにする</div>
-    <% end %>            
-  <% end %>
+  <div id="reads_buttons_<%= @text.id %>">
+    <%= render partial: 'reads/read', locals: { text: @text}%>
+  </div>
 </div>
