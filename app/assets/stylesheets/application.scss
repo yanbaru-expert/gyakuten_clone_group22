@@ -74,6 +74,10 @@
   }
 }
 
+.card a:hover {
+  text-decoration: none;
+  border: 1px solid #5D99FF;
+}
 
 
 @media screen and (min-width: 0px) {
@@ -102,13 +106,12 @@
 
 //----footer----
   footer a {
-    padding: 0 20px;
-    font-size: 2em;
+    padding: 20px;
+    font-size: 1em;
     cursor: pointer;
   }
 
   footer {
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,6 +119,11 @@
 }
 
 @media screen and (max-width: 991px) {
+  .container-fluid{
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
   .container {
     font-size: 0.5rem;
   }
@@ -128,7 +136,7 @@
     font-size: 0.8rem;
   }
 
-  .table {
+  .table-container {
     width: 90%;
   }
 }
@@ -203,7 +211,7 @@
   }
 
   .container p {
-    font-size: 17px;
+    font-size: 14px;
     line-height: 1.9em;
   }
 

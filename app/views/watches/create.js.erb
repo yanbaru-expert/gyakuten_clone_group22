@@ -1,0 +1,1 @@
+$('#watches_buttons_<%= @movie.id %>').html("<%= escape_javascript(render partial: "watches/watched", locals: {movie: @movie} ) %>");

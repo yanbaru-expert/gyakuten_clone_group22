@@ -8,6 +8,12 @@
               <iframe class="embed-responsive-item" src=<%= movie.url%> allowfullscreen></iframe>
             </div>
           </div>
+
+          <!-- 読破ボタン -->
+          <div id="watches_buttons_<%= movie.id %>">
+            <%= render partial: 'watches/watched', locals: { movie: movie}%>
+          </div>
+
           <div class="card-body text-dark movie-body">
             <p class="card-text movie-title">
             Lv.<%= i %>：<%= movie.title %>

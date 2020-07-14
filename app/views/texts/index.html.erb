@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+    <% @texts.each do |text| %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card border-dark mb-3">
+          <%= link_to text_path(text.id),target: :blank do %>
+            <div class="card-header p-0">
+              <div class="card-header p-0">
+                <div class="embed-responsive embed-responsive-16by9">
+          
+                </div>
+              </div>
+            </div>
+
+            <!-- 読破ボタン -->
+            <div id="reads_buttons_<%= text.id %>">
+              <%= render partial: 'reads/read', locals: { text: text}%>
+            </div>
+
+            <div class="card-body text-dark text-body">
+              <p class="card-text text-title">
+                <%= text.title %>
+              </p>
+              <p>【<%= text.genre %>】</p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+$('#reads_buttons_<%= @text.id %>').html("<%= escape_javascript(render partial: "reads/read", locals: {text: @text} ) %>");
