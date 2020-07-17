@@ -47,10 +47,6 @@
   background-color: #5D99FF;
 }
 
-.content-show {
-  padding: 120px 0 80px 0;
-}
-
 .pagination {
   justify-content: center;
   width: 100%;
@@ -85,11 +81,29 @@
 
 
 @media screen and (min-width: 0px) {
+
   .container p.movie-title {
     height: 200px;
     font-size: 1.7rem;
     line-height: 1.5em;
   }
+
+  .container table {
+    font-size: 1.5rem
+  }
+
+  .container table .w-1 {
+    width: 10%;
+  }
+
+  .container table .w-2 {
+    width: 20%;
+  }
+
+  .container table .w-5 {
+    width: 50%;
+  }
+
 //----footer----
   footer a {
     padding: 20px;
@@ -208,9 +222,15 @@
   }
 
   .content-show {
-    width: 710px;
+    width: 750px;
     margin: 0 auto;
   }
+
+  .line-show {
+    width: 450px;
+    margin: 0 auto;
+  }
+
 
   .table {
     width: 100%;
@@ -218,6 +238,22 @@
 
   .movie-body {
     height: 200px;
+  }
+
+  .container table {
+    font-size: 17px
+  }
+
+  .container table .w-1 {
+    width: 10%;
+  }
+
+  .container table .w-2 {
+    width: 20%;
+  }
+
+  .container table .w-5 {
+    width: 50%;
   }
 
   //----footer----

@@ -1,4 +1,4 @@
-<header class="sticky-top">
+<header class="sticky-top <%= "bg-success" if controller.controller_name == "lines" %>">
   <nav class="navbar navbar-expand-lg navbar-dark">
     <%= link_to "Gyakuten", root_path, class: 'navbar-brand' %>
     <%# 画面横幅が小さいとき、トグルボタンが表示されるように設定 %>
@@ -37,7 +37,7 @@
           <%= link_to 'マネタイズ講座','#', class: 'nav-link' %>
         </li>
         <li class="nav-item active">
-          <%= link_to 'LINE@','#', class: 'nav-link' %>
+          <%= link_to 'LINE@', lines_path, class: 'nav-link' %>
         </li>
         <%# ログイン/ログアウト時でメニュー切り替え %>
         <% if user_signed_in? %>
