@@ -37,7 +37,7 @@ end
  gem 'devise-bootstrap-views'
 
  #markdown 対応
- gem 'redcarpet', '~> 2.3.0'
+ gem 'redcarpet', '~> 3.5.1'
  gem 'coderay'
 
  gem 'kaminari'
